@@ -30,9 +30,14 @@ const company = users.some(function (user) {
 const age = users.find(function (user) {
     return user.age>38
 })
+const activeAge= users.filter(user => user.isActive === true).find(user=>user.age>38)
+const balence= users.filter(user=>user.company==="ZENCO").map(user => user.balance)
 
-/
+const potato= users.filter(tags=>tags.includes="fugiat").map(user=>user.age)
     printKata(1, active)
     printKata(2, map)
     printKata(3, company)
     printKata(4, age)
+    printKata(5, activeAge)
+    printKata(6, balence)
+    printKata(7, potato)
